@@ -32,7 +32,7 @@ img = cv2.imread('car.jpeg')
 # 拉普拉斯算子 （之前先去噪 受噪音影响大） 更简单，无需X Y分别计算
 # dst = cv2.Laplacian(img , cv2.CV_64F, ksize = 5)
 
-# canny边缘检测
+# canny边缘检测 （常用来边缘检测，1、5X5 高斯滤波 2、 4个方向 0 45度 90度 135度  3、取4个方向局部最大值，4、阈值计算）
 dst = cv2.Canny(img, 50, 70)
 
 
