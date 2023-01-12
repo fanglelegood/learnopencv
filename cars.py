@@ -7,7 +7,7 @@ min_h = 120
 line_high = 520
 
 #线的偏移
-offset = 20
+offset = 11
 
 #储存有效车辆的数组
 cars = []
@@ -78,7 +78,7 @@ while True:
                     carno += 1
                     cars.remove((x,y))
                     print(carno)
-             
+        cv2.putText(frame, "Cars_No: %s" %(carno), (500, 60), cv2.FONT_HERSHEY_SIMPLEX, 2, (255,0,0),5)    
         cv2.imshow('frame', frame)
         # cv2.imshow('close', close)
 
